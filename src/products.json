@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Samsung A71",
+        "label": "samsung",
+        "quanty": 1,
+        "price": 250000,
+        "img": "https://images.frandroid.com/wp-content/uploads/2019/12/samsung-galaxy-a71-frandroid.png"
+    },
+    {
+        "id": 2,
+        "name": "Samsung A50",
+        "label": "samsung",
+        "quanty": 1,
+        "price": 200000,
+        "img": "https://i5.walmartimages.com/asr/73fb74e4-cba3-46d7-a22a-8e11fe7c0eb2.c6d9cb78872d24956e0af451649dc82c.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+    },
+    {
+        "id": 3,
+        "name": "Samsung S20",
+        "label": "samsung",
+        "quanty": 1,
+        "price": 400000,
+        "img": "https://th.bing.com/th/id/OIP.db8wMAF9j5DTjTAz3lpqbgHaE8?pid=ImgDet&rs=1"
+    },
+    {
+        "id": 4,
+        "name": "Motorola G72",
+        "label": "motorola",
+        "quanty": 1,
+        "price": 170000,
+        "img": "https://priceinsouthafrica.com/wp-content/uploads/2022/10/Motorola-Moto-G72-Price-in-South-Africa-1536x1536.png"
+    },
+    {
+        "id": 5,
+        "name": "Motorola G23",
+        "label": "motorola",
+        "quanty": 1,
+        "price": 120000,
+        "img": "https://th.bing.com/th/id/OIP.3VaWKYJzojEwbynU6q_iAQHaHa?pid=ImgDet&rs=1"
+    },
+    {
+        "id": 6,
+        "name": "motorola E22",
+        "label": "Motorola",
+        "quanty": 1,
+        "price": 80000,
+        "img": "https://th.bing.com/th/id/OIP.k03EziDDBuTuUBt4r-0CfQHaHa?pid=ImgDet&rs=1"
+    },
+    {
+        "id": 7,
+        "name": "Iphone 7",
+        "label": "iphone",
+        "quanty": 1,
+        "price": 400000,
+        "img": "https://i5.walmartimages.com/asr/790c277c-2cb6-4b23-b2db-52b3778c07eb_1.ef2fc75ea214de82b1f540270a3d7e92.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+    },
+    {
+        "id": 8,
+        "name": "Iphone 12",
+        "label": "iphone",
+        "quanty": 1,
+        "price": 2000000,
+        "img": "https://d1eh9yux7w8iql.cloudfront.net/product_images/412301_7a74993c-e23a-48f3-a1b9-96e5ea247053.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Iphone 14",
+        "label": "iphone",
+        "quanty": 1,
+        "price": 2500000,
+        "img": "https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2022/09/PBI-iPhone-14-Plus-Blue-1.png"
+    }
+]

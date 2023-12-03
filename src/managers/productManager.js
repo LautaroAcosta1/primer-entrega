@@ -4,18 +4,40 @@ path = "src/products.json"
 
 class ProductManager {
 
-    products = []
     quantyProductId = 0
 
     constructor() {
         this.path = path
+        this.products = [];
     }
 
-    async addProduct(title, description, code, price, status, stock, category, thumbnails) {
-        const productId = ++this.quantyProductId
-        this.products.push({id: productId, title, description, code, price, status, stock, category, thumbnails})
-        const productsString = JSON.stringify(this.products, null, 4)
-        await fs.promises.writeFile(this.path, productsString)
+    async addProduct(title, description, price, thumbnail, code, stock, status, category) {
+        if(title != "" && description!= "" && category!= "" && price != null && code !== null && typeof code === 'string' && stock != null && typeof status === 'boolean'){
+            let id = 0;
+            for (let i = 0; i < this.products.length; i++) {
+                const element = this.products[i];
+
+                if(element.id > id) {
+                id = element.id;
+                }
+            }
+
+            id++
+            status = typeof status === 'boolean' ? status : true
+            code = code
+            const codeAlready = this.products.some((x) => (x.code == code));
+
+            if (codeAlready){
+                console.error("Ya existe un producto con este código!");
+                return;
+            }
+
+            this.products.push({id:id, title, category, description, price, thumbnail, code, stock, status, path})
+            const productsString = JSON.stringify(this.products, null, 4);
+            await fs.promises.writeFile(this.path, productsString);
+        }else {
+            console.log("Ingrese datos validos!");
+        }
     }
 
     async getProducts() {

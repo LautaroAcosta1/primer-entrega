@@ -28,15 +28,12 @@ router.get("/:pid", async (req, res) => {
 })
 
 // Agrega un nuevo producto al json.
-router.post("/", async (req, res) => { 
+router.post("/", async (req, res) => {
     const product = new ProductManager()
-    const productsList = await product.getProducts();
-    const newProduct = req.body
-    newProduct.id = Math.random()
-    productsList.push(newProduct)
-    console.log(productsList)
-
-    res.status(200).json({ status: "ok", data: [] })
+    let newProduct = req.body;
+    await product.addProduct(newProduct.title,newProduct.category,newProduct.description,newProduct.price,newProduct.thumbnail,newProduct.code,newProduct.stock,newProduct.status)
+    res.status(200).send("Producto agregado con exito!")
+    //console.log(await product.getProducts())
 })
 
 

@@ -33,8 +33,31 @@ router.post("/", async (req, res) => {
     let newProduct = req.body;
     await product.addProduct(newProduct.title,newProduct.category,newProduct.description,newProduct.price,newProduct.thumbnail,newProduct.code,newProduct.stock,newProduct.status)
     res.status(200).send("Producto agregado con exito!")
-    //console.log(await product.getProducts())
 })
 
+// ActuaLiza el producto por los campos enviados desde el body.
+.put('/:id', async (req, res) => {
+    const product = new ProductManager()
+    const productId = parseInt(req.params.id);
+
+    if (isNaN(productId)) {
+        return res.status(400).json({ error: 'ID no válido.' });
+    }
+    const updatedProductData = req.body;
+    await product.updateProduct(productId, updatedProductData);
+    res.json({ message: `Producto con ID ${productId} actualizado con éxito.` });
+})
+
+// Elimina el producto ingresado por el id.
+.delete('/:id', async (req, res) => {
+    const product = new ProductManager()
+    const productId = parseInt(req.params.id);
+    if (isNaN(productId)) {
+        return res.status(400).json({ error: 'ID no válido.' });
+    }
+    //devolvemos respuesta  desde el metodo del deletePorduct ProductManager 
+    res.json(await product.deleteProduct(productId));
+
+})
 
 module.exports = router
